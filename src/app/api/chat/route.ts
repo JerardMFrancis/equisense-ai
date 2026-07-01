@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
       });
     } else if (geminiApiKey || process.env.GOOGLE_API_KEY) {
       model = new ChatGoogleGenerativeAI({
-        modelName: "gemini-1.5-flash",
+        model: "gemini-1.5-flash",
         temperature: 0.2,
         apiKey: geminiApiKey || process.env.GOOGLE_API_KEY,
       });
